@@ -1,22 +1,21 @@
-import Greeting from "./Greeting"
-import Destination from "./Destination"
-import Container from "./Container"
+
+
+import Fruits from "./Fruits"
+import Item from "./Item"
+import Mailbox from "./Mailbox"
 function App() {
-  const destinations = [
-    {
-      place : "seoul",
-      description : "The capital of Korea"
-    },
-  ]
+  const fruits = ["apple", "banana", "orange"]
   return (
-    <div>
-      
-      <Container>여행 지역</Container>
-      <Destination place={"Paris"} description={"The city of love"} />
-      <Destination {...destinations[0]}/>
-      <Destination />
-    </div>
+    <>
+    <Item isDone={true} />
+    <Item isDone={false} />
+    <Mailbox unreadMessage={["a"]}/>
+    {
+      fruits.length > 0 && <Fruits fruits={fruits}/>
+    }
+    </>
   )
+  
 }
 
 export default App
