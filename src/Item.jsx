@@ -1,9 +1,5 @@
 const Item = ({isDone}) => {
-    let text = "Todo";
-    if (isDone) {
-        text = "Done";
-    }
-    return <div>{text}</div>
+    return <div>{idDone ? "Todo" : "Done"} </div>
 }
 
 export default Item;
