@@ -1,13 +1,15 @@
-import List, { FilteredList } from "./List"
+import Alert from "./Alert";
+import Form from "./Form";
+import Propagation from "./Propagation";
 
 function App() {
 
   return (
-  <div>
-    <List/>
-    <FilteredList/>
-  </div>
-    
+    <div>
+      <Alert onAlert={() => alert('world!')}/>
+      <Form/>
+      <Propagation/>
+    </div>
   );
 };
 
